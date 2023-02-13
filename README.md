@@ -103,6 +103,7 @@ con su respectivo código que hemos visto en clase
 ![style](style2.PNG)
 ![style](style3.PNG)
 ![style](style4.PNG)
+![style](style5.PNG)
 
 ### Formulario.php
 ![formulario](formulario.PNG)
