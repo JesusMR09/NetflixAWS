@@ -70,3 +70,42 @@ En una pestaña nueva del navedador pondremos la ip del balanceador para ver si 
 Ahora pondremos la ip con /balancer-manager para ver si esta funciona correctamente como el index.
 ![balancer-manager](Capturablmn.PNG)
 
+Creamos una base de datos a la que conectarnos la base de datos debe de tener el puerto 3306 abierto para poder conectarnos a esta, tras crearla mientra se lanza, creamos una ec2 de windows y cambiamos el grupo de seguridad SGweb para poder conectarnos a la ec2windows como un escritorio en la nube, para esto necesitamos descargarnos la clave en la pestaña de Details del laboratirio, entramos, nos descargamos el heidisql y con el dns de la base de datos, el usuario y la contraseña nos conectamos a la base de datos y pondremos un código parecido a el siguiente
+
+`
+CREATE DATABASE Cluster;
+USE Cluster;
+
+CREATE TABLE donativos(
+id INT(5) PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(30) NOT NULL,
+donativo DECIMAL (8,2) NOT NULL,
+tipomoneda CHAR(5) CHECK (tipomoneda IN ('Euro','Dolar'))
+);
+SELECT * FROM donativos;
+`
+
+En la máquina linux dento de la carpeta efs-mount crearemos los siguientes archivos: index.html, conexion.php, grabar.php y style.css
+
+con su respectivo código que hemos visto en clase
+### Grabar.php
+![grabar.php](grabar.PNG)
+
+### Conexion.php
+![conexion.php](conexion.php.PNG)
+
+### Index.html
+![index](Index.PNG)
+
+### Style.css
+![style](style.PNG)
+![style](style1.PNG)
+![style](style2.PNG)
+![style](style3.PNG)
+![style](style4.PNG)
+
+### Formulario.php
+![formulario](formulario.PNG)
+
+Tras asegurarnos de que nuestro formulario funciona y se conecta a la base de datos debemos securizar modificando en el grupo SWeb para quitarle el SSH y que no se pueda a acceder a nuestra máquina
+
