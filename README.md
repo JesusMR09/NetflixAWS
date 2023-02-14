@@ -103,10 +103,11 @@ con su respectivo código que hemos visto en clase
 ![style](style2.PNG)
 ![style](style3.PNG)
 ![style](style4.PNG)
-![style](style5.PNG)
 
 ### Formulario.php
 ![formulario](formulario.PNG)
 
 Tras asegurarnos de que nuestro formulario funciona y se conecta a la base de datos debemos securizar modificando en el grupo SWeb para quitarle el SSH y que no se pueda a acceder a nuestra máquina
 
+Por aquí dejo un enlace al código de la base de datos:
+[BD](base%20de%20datos%20clustersql.sql)
