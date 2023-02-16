@@ -111,3 +111,13 @@ Tras asegurarnos de que nuestro formulario funciona y se conecta a la base de da
 
 Por aquí dejo un enlace al código de la base de datos:
 [BD](base%20de%20datos%20clustersql.sql)
+
+Principales conceptos de SQL que podemos usar para diseñar nuestra página web:
+
+- CREATE DATABASE se usa para crear la base de datos | ejemplo: CREATE DATABASE taller;
+- CREATE se usa para crear tablas, vistas y otros objetos | ejemplo: CREATE TABLE clientes (atributo , atributo , etc);
+- DROP se utiliza para eliminar objetos | ejemplo: DROP TABLE tablename;
+- ALTER se usa para modificar objetos existentes | ejemplo: ALTER TABLE clientes ADD CONSTRAINT ck_tfn CHECK (tlfn= REGEXP_LIKE (tlfn,'^[6-9][0-9]{8}'));
+- TRUNCATE se usa para eliminar todos los datos de una tabla. | ejemplo: TRUNCATE TABLE Empleados
+- CONSTRAINT es usada para agregar restricciones a una base de datos. Por ejemplo, se puede usar CONSTRAINT para aplicar restricciones de clave primaria, restricciones de clave externa, restricciones de verificación y restricciones de unicidad a una tabla | ejemplo: CONSTRAINT pk_piezasporoperacion PRIMARY KEY (codmat,codop)
+
