@@ -119,5 +119,6 @@ Principales conceptos de SQL que podemos usar para diseñar nuestra página web:
 - DROP se utiliza para eliminar objetos | ejemplo: DROP TABLE tablename;
 - ALTER se usa para modificar objetos existentes | ejemplo: ALTER TABLE clientes ADD CONSTRAINT ck_tfn CHECK (tlfn= REGEXP_LIKE (tlfn,'^[6-9][0-9]{8}'));
 - TRUNCATE se usa para eliminar todos los datos de una tabla. | ejemplo: TRUNCATE TABLE Empleados
-- CONSTRAINT es usada para agregar restricciones a una base de datos. Por ejemplo, se puede usar CONSTRAINT para aplicar restricciones de clave primaria, restricciones de clave externa, restricciones de verificación y restricciones de unicidad a una tabla | ejemplo: CONSTRAINT pk_piezasporoperacion PRIMARY KEY (codmat,codop)
+- CONSTRAINT es usada para agregar restricciones a una base de datos. Por ejemplo, se puede usar CONSTRAINT para aplicar restricciones de clave primaria, restricciones de clave externa, restricciones de verificación y restricciones de unicidad a una tabla | ejemplo: CONSTRAINT pk_piezasporoperacion PRIMARY KEY (codmat,codop) / CONSTRAINT ck_color CHECK (color IN ('verde', 'rojo', 'amarillo', 'blanco')), / CONSTRAINT fk_codigocliente FOREIGN KEY (codigocliente) REFERENCES clientes(cod) / 
+CONSTRAINT ck_pvp CHECK (pvp BETWEEN 10000 AND 60000));
 
